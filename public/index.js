@@ -1,4 +1,3 @@
-console.log("test");
 
 function sendEmail(event) {
 
@@ -15,9 +14,18 @@ function sendEmail(event) {
             'Content-Type': 'application/json'
         },
     }).then((res)=>{
-        console.log(res);
-        receiverEmail=""
+        M.Toast.dismissAll();
+        M.toast({html:'<div style="width:7ch">Sent</div>'})
+    }).catch(()=>{
+        M.Toast.dismissAll();
+        M.toast({html:'<div style="width:7ch">Error</div>'})
     })
+    document.getElementById("to").value=""
+    document.getElementById("name").value=""
+    document.getElementById("subject").value=""
+    document.getElementById("text").value=""
+
+    M.toast({html:'<div style="width:7ch">Sending</div>'})
 
     event.preventDefault()
 }

@@ -4,12 +4,13 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" sizes="192x192"  href="/email.png">
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
 		/>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-		<title>Document</title>
+		<title>Anonymous email sender</title>
 	</head>
 	<body>
         <nav class="purple darken-3">
@@ -25,6 +26,7 @@
 					<div class="row">
 						<div class="input-field col s12">
 							<input
+								required
 								id="name"
 								type="text"
 								class="validate"
@@ -35,6 +37,7 @@
 					<div class="row">
 						<div class="input-field col s12">
 							<input
+								required
 								id="to"
 								type="email"
 								class="validate"
@@ -45,6 +48,7 @@
 					<div class="row">
 						<div class="input-field col s12">
 							<input
+								required
 								id="subject"
 								type="text"
 								class="validate"
@@ -54,11 +58,11 @@
 					</div>
 					<div class="row">
 						<div class="input-field col s12">
-                            <textarea id="text" class="materialize-textarea"></textarea>
+                            <textarea required id="text" class="materialize-textarea"></textarea>
 							<label for="text">Text</label>
 						</div>
 					</div>
-                    <input type="submit" class="btn purple darken-3 right" value="Enviar">
+                    <input type="submit" class="btn purple darken-3 right" value="Send">
 				</form>
 			</div>
 		</div>

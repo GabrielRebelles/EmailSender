@@ -14,6 +14,7 @@ module.exports = async function sendEmail(body) {
 		auth: {user,pass},
 	});
 
+	return true
 	return transporter
 		.sendMail({
 			from: `"${senderName}" <${user}>`, // sender address
