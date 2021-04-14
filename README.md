@@ -10,7 +10,7 @@ Web application to send anonymous emails without registration.
 
 ## Screenshots
 
-##### Main
+#### Main
 ![](docs/Heroku.png)
-##### Email service
+#### Email service
 ![](docs/Gmail.png)
