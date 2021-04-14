@@ -4,6 +4,8 @@ const app = express()
 const routes= require("./api/network")
 const path = require("path")
 
+const PORT = process.env.PORT || 3000;
+
 app.use(express.json())
 
 app.use('/',express.static(path.join(__dirname,"public")))
@@ -14,6 +16,6 @@ app.use((req,res)=>{
 })
 
 
-const server = app.listen(3000,()=>{
+const server = app.listen(PORT,()=>{
     console.log(`Server corriendo en http://localhost:${server.address().port}`);
 })
